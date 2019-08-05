@@ -3,7 +3,7 @@ module Exercise5 where
 
 import ExprT
 import Parser
-import qualified Data.Map as M
+-- import qualified Data.Map as M
 
 eval :: ExprT -> Integer
 eval (Lit i) = i

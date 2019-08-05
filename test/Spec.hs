@@ -8,6 +8,7 @@ import Exercise3
 import Exercise4
 import ExprT
 import Exercise5
+import Exercise6
 import Log
 
 main :: IO ()
@@ -102,3 +103,15 @@ main = hspec $ do
   describe "MinMax" $ do
     it "should do max on + and min on *" $ do
       add (lit 1) (lit 2) `shouldBe` MinMax 2
+
+  describe "fib" $ do
+    it "should return 0 for F0" $ do
+      fib 0 `shouldBe` 0
+    it "should return 1 for F1" $ do
+      fib 1 `shouldBe` 1
+    it "should return 1 for F2" $ do
+      fib 2 `shouldBe` 1
+    it "should return 8 for F6" $ do
+      fib 4 `shouldBe` 3
+    it "should return 14 for 377" $ do
+      fib 30 `shouldBe` 832040
